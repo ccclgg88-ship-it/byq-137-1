@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台球世界 | 球星档案库</title>
+    <title>台球世界 | 赛事中心</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,8 +12,8 @@
 <body>
 
     <header>
-        <h1><i class="fas fa-star"></i> 球星档案库</h1>
-        <p>传奇人物 · 数据档案 · 荣誉殿堂</p>
+        <h1><i class="fas fa-trophy"></i> 赛事中心</h1>
+        <p>精彩赛事 · 实时追踪 · 数据统计</p>
     </header>
 
     <nav>
@@ -24,8 +24,8 @@
             <li><a href="snooker.html">斯诺克</a></li>
             <li><a href="equipment.html">器材介绍</a></li>
             <li><a href="tables.html">球台规格</a></li>
-            <li><a href="tournaments.html">赛事中心</a></li>
-            <li><a href="players.html" class="active">著名球星</a></li>
+            <li><a href="tournaments.html" class="active">赛事中心</a></li>
+            <li><a href="players.html">著名球星</a></li>
             <li><a href="techniques.html">击球技巧</a></li>
             <li><a href="etiquette.html">台球礼仪</a></li>
             <li><a href="favorites.html">我的关注</a></li>
@@ -39,7 +39,7 @@
                 <div class="filter-row">
                     <div class="search-box">
                         <i class="fas fa-search"></i>
-                        <input type="text" id="searchInput" placeholder="搜索球星姓名、绰号、国家...">
+                        <input type="text" id="searchInput" placeholder="搜索赛事名称...">
                     </div>
                 </div>
                 <div class="filter-row">
@@ -53,17 +53,21 @@
                         </select>
                     </div>
                     <div class="filter-item">
-                        <label for="countryFilter">国家/地区</label>
-                        <select id="countryFilter">
-                            <option value="all">全部国家</option>
+                        <label for="statusFilter">赛事状态</label>
+                        <select id="statusFilter">
+                            <option value="all">全部状态</option>
+                            <option value="upcoming">即将开始</option>
+                            <option value="ongoing">进行中</option>
+                            <option value="completed">已结束</option>
                         </select>
                     </div>
                     <div class="filter-item">
-                        <label for="sortBy">排序方式</label>
-                        <select id="sortBy">
-                            <option value="ranking">世界排名</option>
-                            <option value="name">姓名</option>
-                            <option value="winnings">总奖金</option>
+                        <label for="timeFilter">时间范围</label>
+                        <select id="timeFilter">
+                            <option value="all">全部时间</option>
+                            <option value="thisMonth">本月</option>
+                            <option value="nextMonth">下月</option>
+                            <option value="thisYear">今年</option>
                         </select>
                     </div>
                 </div>
@@ -71,26 +75,15 @@
         </section>
 
         <section>
-            <h2>全部球星 <span id="resultCount" class="result-count"></span></h2>
-            <div id="playerList" class="grid-container player-list">
+            <h2>赛事列表 <span id="resultCount" class="result-count"></span></h2>
+            <div id="tournamentList" class="grid-container tournament-list">
             </div>
             <div id="emptyState" class="empty-state" style="display: none;">
-                <i class="fas fa-user"></i>
-                <p>没有找到符合条件的球星</p>
+                <i class="fas fa-search"></i>
+                <p>没有找到符合条件的赛事</p>
             </div>
         </section>
     </main>
-
-    <div id="playerModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalPlayerName"></h2>
-                <button class="modal-close" onclick="closePlayerModal()">&times;</button>
-            </div>
-            <div id="modalBody" class="modal-body">
-            </div>
-        </div>
-    </div>
 
     <footer>
         <p>&copy; 2026 台球世界 Billiards World. All Rights Reserved.</p>
@@ -99,7 +92,7 @@
 
     <script src="js/data.js"></script>
     <script src="js/favorites.js"></script>
-    <script src="js/players.js"></script>
+    <script src="js/tournaments.js"></script>
 </body>
 
 </html>

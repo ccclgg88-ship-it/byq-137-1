@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台球世界 | 我的关注</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><i class="fas fa-star"></i> 我的关注</h1>
+        <p>收藏的赛事与选手 · 随时追踪</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="history.html">发展历史</a></li>
+            <li><a href="rules.html">比赛规则</a></li>
+            <li><a href="snooker.html">斯诺克</a></li>
+            <li><a href="equipment.html">器材介绍</a></li>
+            <li><a href="tables.html">球台规格</a></li>
+            <li><a href="tournaments.html">赛事中心</a></li>
+            <li><a href="players.html">著名球星</a></li>
+            <li><a href="techniques.html">击球技巧</a></li>
+            <li><a href="etiquette.html">台球礼仪</a></li>
+            <li><a href="favorites.html" class="active">我的关注</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="favorites-tabs">
+            <button class="fav-tab-btn active" data-tab="tournaments">
+                <i class="fas fa-trophy"></i> 关注的赛事
+                <span id="tournamentCount" class="tab-count">0</span>
+            </button>
+            <button class="fav-tab-btn" data-tab="players">
+                <i class="fas fa-user"></i> 关注的选手
+                <span id="playerCount" class="tab-count">0</span>
+            </button>
+        </div>
+
+        <section>
+            <div class="tab-content active" id="tab-tournaments">
+                <h2><i class="fas fa-trophy"></i> 关注的赛事</h2>
+                <div id="favoriteTournaments" class="grid-container tournament-list">
+                </div>
+                <div id="emptyTournaments" class="empty-state" style="display: none;">
+                    <i class="far fa-star"></i>
+                    <p>还没有关注的赛事</p>
+                    <a href="tournaments.html" class="btn">去发现赛事</a>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-players">
+                <h2><i class="fas fa-user"></i> 关注的选手</h2>
+                <div id="favoritePlayers" class="grid-container player-list">
+                </div>
+                <div id="emptyPlayers" class="empty-state" style="display: none;">
+                    <i class="far fa-star"></i>
+                    <p>还没有关注的选手</p>
+                    <a href="players.html" class="btn">去发现球星</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="storage-info">
+            <p><i class="fas fa-info-circle"></i> 收藏数据保存在本地浏览器中，清除浏览器数据可能会丢失您的收藏。</p>
+        </section>
+    </main>
+
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalPlayerName"></h2>
+                <button class="modal-close" onclick="closePlayerModal()">&times;</button>
+            </div>
+            <div id="modalBody" class="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 台球世界 Billiards World. All Rights Reserved.</p>
+        <p>Designed with <span style="color: var(--gold);">♥</span> by Antigravity</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/favorites-page.js"></script>
+</body>
+
+</html>
