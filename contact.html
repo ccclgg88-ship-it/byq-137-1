@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台球世界 | 联系我们</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><i class="fas fa-envelope"></i> 联系我们</h1>
+        <p>加入俱乐部 · 商业合作 · 意见反馈</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="history.html">发展历史</a></li>
+            <li><a href="rules.html">比赛规则</a></li>
+            <li><a href="snooker.html">斯诺克</a></li>
+            <li><a href="equipment.html">器材介绍</a></li>
+            <li><a href="tables.html">球台规格</a></li>
+            <li><a href="players.html">著名球星</a></li>
+            <li><a href="techniques.html">击球技巧</a></li>
+            <li><a href="etiquette.html">台球礼仪</a></li>
+            <li><a href="contact.html" class="active">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section style="text-align: center;">
+            <h2>我们很乐意听到您的声音</h2>
+            <p>如果您对我们的内容有任何建议，或者想分享您的台球故事，请随时联系我们。</p>
+        </section>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">您的姓名</label>
+                <input type="text" id="name" name="name" required placeholder="请输入您的姓名">
+            </div>
+
+            <div class="form-group">
+                <label for="email">电子邮箱</label>
+                <input type="email" id="email" name="email" required placeholder="请输入您的电子邮箱">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">主题</label>
+                <select id="subject" name="subject">
+                    <option value="feedback">网站反馈</option>
+                    <option value="collaboration">商务合作</option>
+                    <option value="club">加入俱乐部</option>
+                    <option value="other">其他</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">留言内容</label>
+                <textarea id="message" name="message" rows="6" required placeholder="请在此输入您的留言..."></textarea>
+            </div>
+
+            <div style="text-align: center;">
+                <button type="submit" class="btn" style="border:none; cursor:pointer;">发送留言</button>
+            </div>
+        </form>
+
+        <section style="margin-top: 3rem; text-align: center;">
+            <h3>其他联系方式</h3>
+            <p><i class="fas fa-map-marker-alt" style="color:var(--accent-green);"></i> 地址: XX市XX区台球大道88号</p>
+            <p><i class="fas fa-phone" style="color:var(--accent-green);"></i> 电话: +86 123 4567 8910</p>
+            <p><i class="fas fa-envelope" style="color:var(--accent-green);"></i> 邮箱: contact@billiardsworld.com</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 台球世界 Billiards World. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
